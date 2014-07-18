@@ -1,0 +1,137 @@
+\hypertarget{class_o_auth_login}{\section{\-O\-Auth\-Login \-Class \-Reference}
+\label{class_o_auth_login}\index{\-O\-Auth\-Login@{\-O\-Auth\-Login}}
+}
+
+
+\-Handles user's login and logout process.  
+
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_o_auth_login_a8b75ab7c2c6093a8bdc65aae845f94e3}{\-\_\-\-\_\-construct} (\$user\-\_\-name=null)
+\item 
+\hyperlink{class_o_auth_login_a293fa112652b5448b15c0fb81eafc7cb}{do\-Logout} ()
+\item 
+\hyperlink{class_o_auth_login_aeb08814a3b11252c66e465a868da3ea7}{is\-User\-Logged\-In} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_o_auth_login_ab24faf4aa647cdcee494fc48524ad4ff}{{\bfseries \$errors} = array()}\label{class_o_auth_login_ab24faf4aa647cdcee494fc48524ad4ff}
+
+\item 
+\hypertarget{class_o_auth_login_a21a183f927a6d243fe6b4ba3a6c4d4c8}{{\bfseries \$messages} = array()}\label{class_o_auth_login_a21a183f927a6d243fe6b4ba3a6c4d4c8}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_o_auth_login_a8322cf84e18446c243e58abb037768ff}{check\-Login\-Options} (\$user\-\_\-name=null)
+\item 
+\hyperlink{class_o_auth_login_aa004457f1cc98762661db58d7c773976}{dologin\-With\-Post\-Data} ()
+\item 
+\hyperlink{class_o_auth_login_a71b6b746976b1cd18dfc498108e18207}{do\-Login\-With\-Registration\-Data} (\$user\-\_\-name)
+\item 
+\hyperlink{class_o_auth_login_a51ba603198840f5de5e0c8836a85b5d7}{get\-Auth\-Code} ()
+\item 
+\hyperlink{class_o_auth_login_a5d251c70a3f9f9daaff7f00ec5f894c0}{get\-Access\-Token} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Private \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_o_auth_login_a7691c0162d89de0b6ba47edcd8ba8878}{{\bfseries \$database} = null}\label{class_o_auth_login_a7691c0162d89de0b6ba47edcd8ba8878}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Handles user's login and logout process. 
+
+\begin{DoxyAuthor}{\-Author}
+\-Sebastian \-Ankerhold 
+\end{DoxyAuthor}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_o_auth_login_a8b75ab7c2c6093a8bdc65aae845f94e3}{\index{\-O\-Auth\-Login@{\-O\-Auth\-Login}!\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}}
+\index{\-\_\-\-\_\-construct@{\-\_\-\-\_\-construct}!OAuthLogin@{\-O\-Auth\-Login}}
+\subsubsection[{\-\_\-\-\_\-construct}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-\_\-construct} (
+\begin{DoxyParamCaption}
+\item[{\$}]{user\-\_\-name = {\ttfamily null}}
+\end{DoxyParamCaption}
+)}}\label{class_o_auth_login_a8b75ab7c2c6093a8bdc65aae845f94e3}
+\-Constructor \-Checks and performs the possible login actions 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_o_auth_login_a8322cf84e18446c243e58abb037768ff}{\index{\-O\-Auth\-Login@{\-O\-Auth\-Login}!check\-Login\-Options@{check\-Login\-Options}}
+\index{check\-Login\-Options@{check\-Login\-Options}!OAuthLogin@{\-O\-Auth\-Login}}
+\subsubsection[{check\-Login\-Options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf check\-Login\-Options} (
+\begin{DoxyParamCaption}
+\item[{\$}]{user\-\_\-name = {\ttfamily null}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{class_o_auth_login_a8322cf84e18446c243e58abb037768ff}
+\-Checks the \-G\-E\-T and \-P\-O\-S\-T data and performs the corresponding actions.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+string & {\em \$user\-\_\-name} & \-The name of a user \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_o_auth_login_aa004457f1cc98762661db58d7c773976}{\index{\-O\-Auth\-Login@{\-O\-Auth\-Login}!dologin\-With\-Post\-Data@{dologin\-With\-Post\-Data}}
+\index{dologin\-With\-Post\-Data@{dologin\-With\-Post\-Data}!OAuthLogin@{\-O\-Auth\-Login}}
+\subsubsection[{dologin\-With\-Post\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dologin\-With\-Post\-Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{class_o_auth_login_aa004457f1cc98762661db58d7c773976}
+\-Log in with post data by checking the validity of posted data and store essential data into \-P\-H\-P \-S\-E\-S\-S\-I\-O\-N \hypertarget{class_o_auth_login_a71b6b746976b1cd18dfc498108e18207}{\index{\-O\-Auth\-Login@{\-O\-Auth\-Login}!do\-Login\-With\-Registration\-Data@{do\-Login\-With\-Registration\-Data}}
+\index{do\-Login\-With\-Registration\-Data@{do\-Login\-With\-Registration\-Data}!OAuthLogin@{\-O\-Auth\-Login}}
+\subsubsection[{do\-Login\-With\-Registration\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf do\-Login\-With\-Registration\-Data} (
+\begin{DoxyParamCaption}
+\item[{\$}]{user\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{class_o_auth_login_a71b6b746976b1cd18dfc498108e18207}
+\-If a user registered a new account, this function uses the entered data to log in the user
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_o_auth_login_a293fa112652b5448b15c0fb81eafc7cb}{\index{\-O\-Auth\-Login@{\-O\-Auth\-Login}!do\-Logout@{do\-Logout}}
+\index{do\-Logout@{do\-Logout}!OAuthLogin@{\-O\-Auth\-Login}}
+\subsubsection[{do\-Logout}]{\setlength{\rightskip}{0pt plus 5cm}{\bf do\-Logout} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_o_auth_login_a293fa112652b5448b15c0fb81eafc7cb}
+\-Performs the logout by resetting the \$\-\_\-\-S\-E\-S\-S\-I\-O\-N array and displays a logout message \hypertarget{class_o_auth_login_a5d251c70a3f9f9daaff7f00ec5f894c0}{\index{\-O\-Auth\-Login@{\-O\-Auth\-Login}!get\-Access\-Token@{get\-Access\-Token}}
+\index{get\-Access\-Token@{get\-Access\-Token}!OAuthLogin@{\-O\-Auth\-Login}}
+\subsubsection[{get\-Access\-Token}]{\setlength{\rightskip}{0pt plus 5cm}{\bf get\-Access\-Token} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{class_o_auth_login_a5d251c70a3f9f9daaff7f00ec5f894c0}
+\-Request an access token by sending the received auth.\-code to the token endpoint. \-If successful the token will be stored in \-S\-E\-S\-S\-I\-O\-N \hypertarget{class_o_auth_login_a51ba603198840f5de5e0c8836a85b5d7}{\index{\-O\-Auth\-Login@{\-O\-Auth\-Login}!get\-Auth\-Code@{get\-Auth\-Code}}
+\index{get\-Auth\-Code@{get\-Auth\-Code}!OAuthLogin@{\-O\-Auth\-Login}}
+\subsubsection[{get\-Auth\-Code}]{\setlength{\rightskip}{0pt plus 5cm}{\bf get\-Auth\-Code} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}private\mbox{]}}}}\label{class_o_auth_login_a51ba603198840f5de5e0c8836a85b5d7}
+\-Redirects to the authorization endpoint to request an authorization code \-If successful the user will be redirected back to this location with a code \hypertarget{class_o_auth_login_aeb08814a3b11252c66e465a868da3ea7}{\index{\-O\-Auth\-Login@{\-O\-Auth\-Login}!is\-User\-Logged\-In@{is\-User\-Logged\-In}}
+\index{is\-User\-Logged\-In@{is\-User\-Logged\-In}!OAuthLogin@{\-O\-Auth\-Login}}
+\subsubsection[{is\-User\-Logged\-In}]{\setlength{\rightskip}{0pt plus 5cm}{\bf is\-User\-Logged\-In} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_o_auth_login_aeb08814a3b11252c66e465a868da3ea7}
+\-Simply return the current state of the user's login \begin{DoxyReturn}{\-Returns}
+boolean user's login status 
+\end{DoxyReturn}
+
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-O\-Auth\-Login.\-php\end{DoxyCompactItemize}

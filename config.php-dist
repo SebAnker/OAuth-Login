@@ -1,0 +1,17 @@
+<?php
+
+/**
+/* AUTH_HOST: database host, usually it's "127.0.0.1" or "localhost", some servers also need port info
+ * AUTH_NAME: name of the database. please note: database and database table are not the same thing
+ * AUTH_USER: user for your database. the user needs to have rights for SELECT, UPDATE, DELETE and INSERT.
+ * AUTH_PASS: the password of the above user
+
+ * XODX_ADRESS: The base uri for xodx
+ */
+
+define("AUTH_HOST", "");
+define("AUTH_NAME", "");
+define("AUTH_USER", "");
+define("AUTH_PASS", "");
+
+define("XODX_ADRESS", "");

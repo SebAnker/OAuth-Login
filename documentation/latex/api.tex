@@ -1,0 +1,52 @@
+\hypertarget{api_sec_api}{}\section{\-A\-P\-I}\label{api_sec_api}
+\-All requests need to be made to api/foo, for example\-: \par
+ \href{http://example.com/Login-Authorization/api/request-token}{\tt http\-://example.\-com/\-Login-\/\-Authorization/api/request-\/token}\hypertarget{api_sub1}{}\subsection{\-Authentication}\label{api_sub1}
+\hypertarget{api_subsub1}{}\subsubsection{request-\/token}\label{api_subsub1}
+\-Redirect here with these query parametes\-:
+\begin{DoxyItemize}
+\item client\-\_\-id
+\item scope
+\item redirect\-\_\-uri (optional if only one is registered)
+\item user\-\_\-id
+\end{DoxyItemize}\-A approval dialog will open, if the user grants authorization \par
+ the user will be redirected to redirect\-\_\-uri with these query parameters\-:
+\begin{DoxyItemize}
+\item code
+\item state
+\end{DoxyItemize} 
+\vspace{10cm}
+\pagebreak
+\hypertarget{api_subsub2}{}\subsubsection{access-\/token}\label{api_subsub2}
+\-Send a \-P\-O\-S\-T request with these parametes to receive an access token\-:
+\begin{DoxyItemize}
+\item client\-\_\-id
+\item client\-\_\-secret
+\item redirect\-\_\-uri (same as in request-\/token or the only registered one)
+\item code (from request-\/token)
+\end{DoxyItemize}\-The response will be a \-J\-S\-O\-N\-:\par
+ \begin{DoxyVerb}
+   {"access_token": string,
+    "expires_in": int,
+    "token_type": string,
+    "scope": string}
+\end{DoxyVerb}
+\hypertarget{api_sub2}{}\subsection{\-Resource}\label{api_sub2}
+\hypertarget{api_subsub3}{}\subsubsection{validate}\label{api_subsub3}
+\-Send a \-P\-O\-S\-T request with these parametes to check if a token is still valid\-:
+\begin{DoxyItemize}
+\item access\-\_\-token
+\end{DoxyItemize}\-The response will be a \-J\-S\-O\-N\-:\par
+ \begin{DoxyVerb}
+   {"success": bool}
+\end{DoxyVerb}
+\hypertarget{api_subsub4}{}\subsubsection{get-\/login-\/data}\label{api_subsub4}
+\-Send a \-P\-O\-S\-T request with these parametes to get the data of the user associated with the token\-:
+\begin{DoxyItemize}
+\item access\-\_\-token
+\end{DoxyItemize}\-The response will be a \-J\-S\-O\-N\-:\par
+ \begin{DoxyVerb}
+   {"user_name": string,
+    "user_id": int,
+    "foaf_uri": string}
+\end{DoxyVerb}
+ 
